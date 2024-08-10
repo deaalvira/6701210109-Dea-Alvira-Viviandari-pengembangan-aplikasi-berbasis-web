@@ -13,21 +13,28 @@ form.addEventListener('submit', function (event) {
 
     let hasil;
 
-    // Melakukan operasi aritmatika menggunakan if-else
-    if (operator === '+') {
-        hasil = number1 + number2;
-    } else if (operator === '-') {
-        hasil = number1 - number2;
-    } else if (operator === '*') {
-        hasil = number1 * number2;
-    } else if (operator === '/') {
-        if (number2 !== 0) {
-            hasil = number1 / number2;
-        } else {
-            hasil = 'Error: Pembagian dengan nol tidak diizinkan';
-        }
-    } else {
-        hasil = 'Operator tidak valid';
+    //Saya Memilih Cabang branch branch-6701210109
+    // Melakukan operasi aritmatika sesuai operator yang dipilih
+    switch (operator) {
+        case '+':
+            hasil = number1 + number2;
+            break;
+        case '-':
+            hasil = number1 - number2;
+            break;
+        case '*':
+            hasil = number1 * number2;
+            break;
+        case '/':
+            if (number2 !== 0) {
+                hasil = number1 / number2;
+            } else {
+                hasil = 'Error: Pembagian dengan nol tidak diizinkan';
+            }
+            break;
+        default:
+            hasil = 'Operator tidak valid';
+
     }
 
     // Menampilkan hasil
